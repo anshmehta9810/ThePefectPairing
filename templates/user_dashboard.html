@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <h2>Recommended Companions:</h2>
+    <ul id="recommendations-list">
+        {% for companion in recommendations %}
+        <li>{{ companion.name }}, Age: {{ companion.age }}, Address: {{ companion.address }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
